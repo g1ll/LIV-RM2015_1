@@ -37,6 +37,8 @@
 
         //#################################
         //Quadro 11.3
+        //
+        //Criação da Função canvasApp()
         //----------------------
         window.onload = function () {
             canvasApp();
@@ -50,9 +52,68 @@
 
         //#################################
         //Quadro 11.4
+        //Criarção da Função dawScreen()
         //----------------------
-        
+        window.onload = function () {
+            canvasApp();
+        };
+        function canvasApp() {
 
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
 
+            function drawScreen() {
+                
+                context.fillStyle = "#ffffff";
+                context.fillRect(0, 0, 500, 300);
+            }
+        }
+        //---------------------
+        //#################################
+        //Quadro 11.5
+        //
+        //----------------------
+        window.onload = function () {
+            canvasApp();
+        };
+        function canvasApp() {
+
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+
+            function drawScreen() {
+
+                context.fillStyle = "#ffffff";
+                context.fillRect(0, 0, 500, 300);
+
+                //box
+                context.strokeStyle = "#000000";
+                context.strokeRect(0, 0, 500, 300);
+            }
+        }
+        //---------------------
+        //#################################
+        //Quadro 11.6
+        //
+        //----------------------
+        window.onload = function () {
+            canvasApp();
+        };
+        function canvasApp() {
+
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+
+            function drawScreen() {
+
+                context.fillStyle = "#ffffff";
+                context.fillRect(0, 0, 500, 300);
+
+                //box
+                context.strokeStyle = "#000000";
+                context.strokeRect(0, 0, 500, 300);
+            }
+            drawScreen(); //Chamada a função  drawScreen();
+        }
     </script>
 </html>
