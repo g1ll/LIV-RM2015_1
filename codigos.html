@@ -63,7 +63,7 @@
             var context = canvas.getContext("2d");
 
             function drawScreen() {
-                
+
                 context.fillStyle = "#ffffff";
                 context.fillRect(0, 0, 500, 300);
             }
@@ -82,7 +82,7 @@
             var context = canvas.getContext("2d");
 
             function drawScreen() {
-
+                //background
                 context.fillStyle = "#ffffff";
                 context.fillRect(0, 0, 500, 300);
 
@@ -105,7 +105,7 @@
             var context = canvas.getContext("2d");
 
             function drawScreen() {
-
+                //background
                 context.fillStyle = "#ffffff";
                 context.fillRect(0, 0, 500, 300);
 
@@ -115,5 +115,41 @@
             }
             drawScreen(); //Chamada a função  drawScreen();
         }
+        //---------------------
+        //#################################
+        //Quadro 11.7
+        //
+        //----------------------
+        window.onload = function () {
+            canvasApp();
+        };
+        function canvasApp() {
+
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+
+            function drawScreen() {
+                //background
+                context.fillStyle = "#ffffff";
+                context.fillRect(0, 0, 500, 300);
+
+                //box
+                context.strokeStyle = "#000000";
+                context.strokeRect(0, 0, 500, 300);
+
+                //Retângulo
+                context.fillStyle = "blue";
+                context.fillRect(x, y, 50, 50);
+
+            }
+            drawScreen(); //Chamada a função  drawScreen();
+        }
+        //---------------------
+        //#################################
+        //Quadro 11.8
+        //
+        //----------------------
+        //full circle
+        context.beginPath();
     </script>
 </html>
