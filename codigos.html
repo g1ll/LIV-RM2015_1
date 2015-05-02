@@ -139,7 +139,7 @@
 
                 //Retângulo
                 context.fillStyle = "blue";
-                context.fillRect(x, y, 50, 50);
+                context.fillRect(10, 10, 50, 50);
 
             }
             drawScreen(); //Chamada a função  drawScreen();
@@ -164,8 +164,8 @@
         //
         //----------------------
         context.arc(
-                sx + 25, //Posição X, referência ao centro do círculo;
-                sy + 25, //Posição Y;
+                35, //Posição X, referência ao centro do círculo;
+                35, //Posição Y;
                 20, //Raio do círculo;
                 (Math.PI / 180) * 0, //Ângulo inicial, onde começará o traço;
                 (Math.PI / 180) * 360, //Ângulo final, onde termina o traço;
@@ -173,8 +173,87 @@
                 );
         //---------------------
         //#################################
-        //Quadro 11.10
+        //Quadro 11.11
         //
         //----------------------
+        context.fillStyle = "red"; //Configura a cor a ser preenchido o círculo
+        context.fill(); //Realiza o prenchimento do círculo
+        context.stroke(); //Desenha o contorno do círculo
+        context.closePath(); //Finaliza o caminho "Path" do desenho atual
+        //---------------------
+        //#################################
+        //Quadro 11.12
+        //Código para desenhar meio circulo
+        //----------------------
+        context.beginPath();
+        context.strokeStyle = "black";
+        context.lineWidth = 2;
+        context.arc(
+                35, //Posição X, referência ao centro do círculo;
+                35, //Posição Y;
+                15, //Raio do círculo;
+                (Math.PI / 180) * 180, //Ângulo inicial, onde começará o traço;
+                (Math.PI / 180) * 270, //Ângulo final, onde termina o traço;
+                false //Sentido do traço, horário (FALSE), anti-horário (TRUE);
+                );
+        context.stroke(); //Desenha o contorno do círculo
+        context.closePath(); //Finaliza o caminho "Path" do desenho atual
+        //---------------------
+        //#################################
+        //Quadro 11.13
+        //Código para configurar  o setinterval
+        //----------------------
+        var interval = 60;
+        var loop = setInterval(drawScreen, interval);
+        //---------------------
+        //#################################
+        //Quadro 11.14
+        //Apenas exclua a chamada a função drawScreen()
+        //----------------------
+        //---------------------
+        //#################################
+        //Quadro 11.15
+        //----------------------
+        var x = 10;
+        var y = 10;
+        //---------------------
+        //#################################
+        //Quadro 11.16
+        //----------------------
+        context.fillRect(x, y, 50, 50);
+        //---------------------
+        //#################################
+        //Quadro 11.17
+        //Adicionar o incremento ++ na variável x
+        //----------------------
+        x++;
+        //---------------------
+        //#################################
+        //Quadro 11.18
+        //Evento do teclado com Jquery
+        //----------------------
+        $(document).keydown(function (e) {
+            var key = e.which;
+            alert(key);
+        });
+        //---------------------
+        //#################################
+        //Quadro 11.19
+        //Evento do teclado com  método nativo
+        //----------------------
+        windows.addEventListener("Keydown", function (e){
+            var key = e.keyCode;
+            alert(key);
+        });
+        //---------------------
+        //#################################
+        //Quadro 11.20
+        //Evento do teclado com  método nativo
+        //----------------------
+         $(document).keydown(function (e) {
+            var key = e.which;
+            if(key === 39)
+                x+=5;
+        });
     </script>
 </html>
